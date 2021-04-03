@@ -56,6 +56,6 @@ getQuoteAriva <-
     res$Date <- format(as.Date(res$Date))
     
     # create and return time series object
-    ts <- as.xts(res[,-1], order.by = as.POSIXct(res[, 1]))
+    ts <- as.xts(res[, -1], order.by = as.POSIXct(res[, 1]))
     return(ts)
   }
